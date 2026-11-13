@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-white font-sans text-cocoa antialiased; overflow-x: hidden; }
+  h1, h2, h3, h4 { @apply font-serif text-rose; }
+  :focus-visible { outline: 2px solid #C77D69; outline-offset: 3px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .section-y { @apply py-16 sm:py-24; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[0.78rem] font-semibold uppercase tracking-[0.14em] transition-colors duration-300; }
+  .btn-primary { @apply btn bg-terracota text-white hover:bg-rose; }
+  .btn-outline { @apply btn border border-rose/40 text-rose hover:bg-rose hover:text-white; }
+  .btn-light { @apply btn bg-white text-rose hover:bg-nude; }
+  .btn-ghost-light { @apply btn border border-white/50 text-white hover:bg-white/10; }
+  .eyebrow { @apply text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-terracota; }
+  .rule { @apply block h-px w-14 bg-champagne; }
+}
