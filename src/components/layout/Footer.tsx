@@ -29,7 +29,7 @@ export default function Footer() {
       )}
       <div className="container-x relative grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:py-16">
         <div>
-          <Logo light />
+          <Logo light className="h-12 sm:h-14" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/85">Cuidado, beleza e bem-estar com atenção a cada detalhe.</p>
         </div>
 

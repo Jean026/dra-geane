@@ -20,9 +20,9 @@ export default function Header() {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? "shadow-card" : ""}`}>
-      <div className="container-x flex h-[4.25rem] items-center justify-between gap-4 lg:h-20">
-        <a href="#inicio" aria-label="Mulher + Bonita – início" className="shrink-0">
-          <Logo />
+      <div className="container-x flex h-[4.25rem] items-center justify-between gap-6 lg:h-20">
+        <a href="#inicio" aria-label="Mulher + Bonita – ir para o início" className="shrink-0">
+          <Logo priority className="h-9 sm:h-10 xl:h-12" />
         </a>
 
         <nav aria-label="Principal" className="hidden lg:block">

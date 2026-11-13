@@ -1,11 +1,16 @@
-/** Logo provisória em texto. Substituir por public/logo/logo.svg quando o arquivo oficial for fornecido. */
-export default function Logo({ light = false }: { light?: boolean }) {
+import Image from "next/image";
+
+/** Logo oficial. `light` usa a versão clara (para fundos escuros, como o rodapé). */
+export default function Logo({ light = false, priority = false, className = "" }: { light?: boolean; priority?: boolean; className?: string }) {
   return (
-    <span className="inline-flex flex-col leading-none" aria-label="Mulher + Bonita Clínicas Integradas">
-      <span className={`font-serif text-[1.35rem] font-medium tracking-wide sm:text-2xl ${light ? "text-white" : "text-rose"}`}>
-        Mulher <span className={light ? "text-champagne" : "text-terracota"}>+</span> Bonita
-      </span>
-      <span className={`mt-1 text-[0.55rem] uppercase tracking-[0.34em] ${light ? "text-champagne" : "text-terracota"}`}>Clínicas Integradas</span>
-    </span>
+    <Image
+      src={light ? "/logo/logo-clara.png" : "/logo/logo-escura.png"}
+      alt="Mulher + Bonita Clínicas Integradas – estética avançada"
+      width={light ? 2024 : 2003}
+      height={light ? 423 : 403}
+      priority={priority}
+      sizes="(min-width:1280px) 240px, 200px"
+      className={`w-auto ${className}`}
+    />
   );
 }
